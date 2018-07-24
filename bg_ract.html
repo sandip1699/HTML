@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>bg rect</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style>
+		.about-section-innr {
+			position: relative;
+			z-index: 2;
+			padding: 150px 40px 150px 0;
+			background: #5d46e8;
+			color: #fff;
+		}
+
+		.about-section-innr:before {
+			position: absolute;
+			top: 0;
+			left: -190px;
+			width: 270px;
+			height: 100%;
+			content: '';
+			z-index: -1;
+			background: #5d46e8;
+			border-radius: 100px 0 0 100px;
+			transform: skew(9deg);
+		}
+
+		.about-section-innr:after {
+			position: absolute;
+			top: 0;
+			right: -280px;
+			width: 370px;
+			height: 100%;
+			content: '';
+			z-index: -1;
+			background: #5d46e8;
+			border-radius: 0 100px 100px 0;
+			transform: skew(-7deg);
+		}
+		.mycontainer {width:700px; margin: 70px auto; color: #fff;}
+		.div_height {height: 500px;}
+
+	.card {
+    background: #6751f9;
+    height: 425px;
+    /* box-shadow: 1px 1px 20px rgba(0,0,0,0.3); */
+    border-radius: 60px;
+    padding: 71px;
+    color: #fff;
+}
+	</style>
+</head>
+
+<body>
+
+	<div class="mycontainer">
+
+		<div class="about-section-innr">
+			<div class="div_height">
+				<div class="card">
+					<label>dff</label>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

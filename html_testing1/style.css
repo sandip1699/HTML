@@ -1,0 +1,28 @@
+.item-circle {
+    width: 12px;
+    height: 12px;
+    background-color: #04d2c8;
+    position: absolute;
+    top: 6px;
+    border-radius: 50%;
+    margin-left: -5px;
+}
+.tm_body {
+    padding-left: 27px;
+    padding-bottom: 12px; }
+.tm_body::after {
+    content: "";
+    position: absolute;
+    top: .6em;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: #04d2c8;
+    z-index: 1;
+    -webkit-transition: linear height .5s;
+    -moz-transition: linear height .5s;
+    transition: linear height .5s;
+    height: 100%;
+}
+.tm_main {position: relative;}
+.tm_body h2 {margin-top:0px;}

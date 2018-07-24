@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+.theme-animation {
+    background: #ff3f71;
+    background-image: linear-gradient(120deg,#ff2d60,#ff9132,#ff61fa,#6caafd,#29ccff,#1deab9);
+    background-repeat: no-repeat;
+    background-size: 800% 400%;
+    animation-name: bgAnimation;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+@keyframes bgAnimation {
+    0% {
+        background-position: 0 50%
+    }
+    to {
+        background-position: 100% 50%
+    }
+}
+
+.content-wrapper, .page {
+    min-height: 700px;
+    height: 100vh;
+}
+ 
+</style>
+
+
+<body> 
+
+<div class="theme-animation page">
+    <h1 class="mt-1">welcome</h1>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+ <div class="modal" id="myModal" role="dialog" data-backdrop="static">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal_logo"> <img src="images/logo2.png">  </div>
+                    <h4> Sign Up for the Giving What We Can Trust </h4>
+                    <div class="modalinput">
+                        <form id="myformmodal" action="admin/process_modal.php" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="contact" placeholder="Enter Your Email or phone Number">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Enter E-mail Address">
+                        </div>
+                        <div class="form-group">
+                            <span class="input-group-btn">
+                                <button id="submitmodal" class="btn btn-danger" type="submit"> Register </button>
+                            </span>
+                        </div>
+                        <div class="form-group">
+                                <div class="alert alert-success" id="achno"> </div>
+                            </div>
+                        </form>
+                    </div>
+                    <p> You can help support the places you love by becoming a member, donating or giving your time as a volunteer </p>
+                    <p> <button data-dismiss="modal" class="btn btn-danger"> Skip </button> </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>

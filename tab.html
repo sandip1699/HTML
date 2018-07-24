@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tab Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  $(document).ready(function(){
+	
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+
+})
+  </script>
+  <style>
+		.tab-content{
+			display: none; 
+		}
+		.tab-content.current{
+			display: block;
+		}
+.tab-content{background: #ededed;padding: 15px; }		
+ul.tabs {margin: 0px;padding: 0px;list-style: none;}
+ul.tabs li{background: none;color: #222;display: inline-block;padding: 10px 15px;cursor: pointer;}
+ul.tabs li.current{background: #ededed;color: #222;}
+
+  </style>
+</head>
+<body> 
+
+<div class="container">
+
+	<ul class="tabs">
+		<li class="tab-link current" data-tab="tab-1">Tab One</li>
+		<li class="tab-link" data-tab="tab-2">Tab Two</li>
+		<li class="tab-link" data-tab="tab-3">Tab Three</li>
+		<li class="tab-link" data-tab="tab-4">Tab Four</li>
+	</ul>
+
+	<div id="tab-1" class="tab-content current">
+		<b>tab1</b> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	</div>
+	<div id="tab-2" class="tab-content">
+		 <b>tab2</b>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<div id="tab-3" class="tab-content">
+		<b>tab3</b> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+	</div>
+	<div id="tab-4" class="tab-content">
+		<b>tab4</b> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	</div>
+
+</div><!-- container -->
+
+</body>
+</html>

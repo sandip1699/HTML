@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Tab Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			$('.dropdown_input').click(function () {
+
+				$('.ac-select-wrapper').addClass('open_dropdown');
+
+			});
+
+			$(document).mouseup(function (e) {
+				var container = $(".ac-select-wrapper");
+
+				// if the target of the click isn't the container nor a descendant of the container
+				if (!container.is(e.target) && container.has(e.target).length === 0) {
+					$('.ac-select-wrapper').removeClass('open_dropdown');
+				}
+			});
+
+		});
+	</script>
+	<style>
+		.ac-select-wrapper {
+			position: relative;
+			display: inline-block;
+		}
+
+		.select_input {
+			vertical-align: middle;
+			height: 34px;
+			overflow: hidden;
+			border: 1px solid #c0c0c0;
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+		}
+
+		.select_input .form-control {
+			border: none;
+			border-radius: 0px;
+		}
+
+		.open_dropdown .ac-select-popup {
+			display: block;
+		}
+
+		.ac-select-popup {
+			position: absolute;
+			top: 34px;
+			border-left: 1px solid #c0c0c0;
+			border-right: 1px solid #c0c0c0;
+			border-bottom: 1px solid #c0c0c0;
+			z-index: 99999999;
+			background-color: white;
+			padding-top: 2px;
+			padding-left: 2px;
+			padding-bottom: 2px;
+			width: 100%;
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="ac-select-wrapper">
+			<div class="select_input">
+				<input type="text" class="form-control dropdown_input">
+			</div>
+			<div class="ac-select-popup">
+				<ul>
+					<li> one </li>
+					<li> two </li>
+				</ul>
+			</div>
+		</div>
+
+
+
+	</div>
+	<!-- container -->
+
+</body>
+
+</html>

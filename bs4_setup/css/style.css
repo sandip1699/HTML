@@ -1,0 +1,44 @@
+.no-padding{padding:0px;}
+.paddingl{padding-left: 0px;}
+.paddingr{padding-right: 0px;}
+.m-t10{margin-top: 10px;}
+.m-t20{margin-top: 20px;}
+.m-t30{margin-top: 30px;}
+.m-t40{margin-top: 40px;}
+.m-t50{margin-top: 50px;}
+.m-b10{margin-bottom: 10px;}
+.m-b20{margin-bottom: 20px;}
+.m-b30{margin-bottom: 30px;}
+.m-b40{margin-bottom: 40px;}
+.m-b50{margin-bottom: 50px;}
+
+
+.navigation {background: #ddd; padding: 10px; float: left; width: 100%;}
+
+.logo {float: left;}
+.navbars {float: right;}
+
+.navbars ul {list-style: none;}
+.navbars ul li {float: left;position: relative;}
+.navbars ul li.dropdown .submenu li {width: 100%;}
+.navbars ul li a {display: block;padding: 6px 12px; color: #555;}
+
+.navbars ul li.dropdown .submenu {display: none; position: absolute; top:35px; right: 0; background: #fff; box-shadow: 1px 1px 15px rgba(0,0,0,0.2); 
+    min-width: 200px; padding: 10px;  }
+.navbars ul li.dropdown:hover .submenu {display: block;}
+
+
+.toggle_menu { position: absolute; right:10px; top: 10px; display: none; }
+
+
+@media screen and (max-width:768px){
+    .toggle_menu { display: block; }
+    .navbars {display: none;}
+    .navbars.open {display: block;}
+    .navbars ul li.dropdown .submenu {position: relative; top: 0; right: 0; float: left;
+        width: 100%;}
+
+
+    .navbars ul li {width: 100%;}
+    .navbars {width: 100%;}
+}

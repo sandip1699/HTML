@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+    <title>Chart Doughnut</title>
+<style>
+    .canvasjs-chart-credit {display: none;}
+</style>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "Use of Proceeds",
+		horizontalAlign: "center"
+	},
+	data: [{
+		type: "doughnut",
+		startAngle: 60,
+        innerRadius:80,
+		indexLabelFontSize: 17,
+		indexLabel: "{label} - #percent%",
+        toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+        showInLegend: true,
+		dataPoints: [
+       {  y: 43.37, legendText:"Android 53%", indexLabel: "Android 53%" },
+       {  y: 25.0, legendText:"iOS 35%", indexLabel: "Apple iOS 35%" },
+       {  y: 17, legendText:"Blackberry 7%", indexLabel: "Blackberry 7%" },
+       {  y: 12, legendText:"Windows 2%", indexLabel: "Windows Phone 2%" },
+       {  y: 5, legendText:"Others 5%", indexLabel: "Others 5%" }
+       ]
+	}]
+});
+chart.render();
+
+}
+</script>
+
+<script>
+        window.onload = function () {
+        
+        var chart = new CanvasJS.Chart("chartContainertwo", {
+            animationEnabled: true,
+            title:{
+                text: "Use of Proceeds",
+                horizontalAlign: "center"
+            },
+            data: [{
+                type: "doughnut",
+                startAngle: 60,
+                innerRadius:80,
+                indexLabelFontSize: 17,
+                indexLabel: "{label} - #percent%",
+                toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                dataPoints: [
+                {  y: 53.37, indexLabel: "Android" },
+                {  y: 35.0, indexLabel: "Apple iOS" },
+                {  y: 7, indexLabel: "Blackberry" },
+                {  y: 2, indexLabel: "Windows Phone" },
+                {  y: 5, indexLabel: "Others" }
+                ]
+                
+            }]
+        });
+        chart.render();
+        
+        }
+        </script>
+</head>
+<body>
+    <div id="chartContainertwo" style="height:500px; width:800px; margin:50px auto;"></div>
+      <div id="chartContainer" style="height:500px; width:800px; margin:50px auto;"></div>
+
+</body>
+</html>

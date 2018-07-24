@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+/**
+ * 2. Header
+ */
+ .ms-header { position: fixed; width: 100%; background-color: #fff; z-index: 3; }
+/* 2.1 Menu */
+.ms-logo { position: relative; z-index: 7; height: 50px; }
+.logo-dark, .logo-light { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity .3s ease .4s; }
+.ms-logo img { width: auto; height: 100%; }
+.logo-dark.current, .logo-light.current { opacity: 1; }
+.logo-dark.active, .logo-light.active { opacity: 1; transition: opacity .1s; }
+.ms-nav { padding: 2em 3em; color: inherit; }
+/* 2.2 Burger button */
+.menu-btn { margin-right: 0; margin-left: auto; overflow: visible; cursor: pointer; z-index: 7; background: transparent; border: 0; transition-timing-function: linear; transition-duration: .3s ease; transition-property: opacity, -webkit-filter; transition-property: opacity, filter; transition-property: opacity, filter, -webkit-filter; }
+.menu-btn:focus { outline: none; }
+.navbar-white .menu-btn-label { color: #fff; }
+.menu-btn-label { display: block; font-family: 'Yantramanav', Arial; font-size: 16px; width: 100%; height: auto; position: relative; top: 0; left: -4em; padding-right: 4em; text-transform: uppercase; line-height: 1.5em; transition: color .3s ease .4s; color: #151515; }
+.menu-btn.is-active .menu-btn-label { color: #fff !important; transition: color .1s ease; }
+.menu-btn-box { position: relative; display: inline-block; width: 30px; height: 20px; vertical-align: middle; }
+.menu-btn-inner { display: block; top: 0; }
+.navbar-white .menu-btn-inner, .navbar-white .menu-btn-inner:after, .navbar-white .menu-btn-inner:before { background-color: #fff; }
+.menu-btn-inner:after, .menu-btn-inner:before { display: block; content: ''; }
+.menu-btn-inner, .menu-btn-inner:after, .menu-btn-inner:before { position: absolute; width: 30px; height: 3px; background-color: #151515; transition: all .3s ease .5s; }
+.menu-btn-inner:before { top: 8px; left: -8px; }
+.menu-btn-inner:after { top: 16px; width: 26px; }
+.menu-btn.is-active .menu-btn-inner, .menu-btn.is-active .menu-btn-inner:after { background-color: #fff; transition-delay: .1s; }
+.menu-btn.is-active .menu-btn-inner { -webkit-transform: translate3d(0, 8px, 0) rotate(45deg); transform: translate3d(0, 8px, 0) rotate(45deg); }
+.menu-btn.is-active .menu-btn-inner:before { opacity: 0; transition: opacity .3s ease 0s }
+.menu-btn.is-active .menu-btn-inner:after { width: 30px; -webkit-transform: translate3d(0, -16px, 0) rotate(-90deg); transform: translate3d(0, -16px, 0) rotate(-90deg); }
+/* 2.3 Collapse navigation */
+.ms-nav { display: flex; align-items: center; }
+.height-full-viewport { position: fixed; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow-y: auto; left: 0; top: 0; width: 100%; height: 0%; background-color: #151515; z-index: 5; overflow: hidden; transition: height .8s cubic-bezier(0.3, 1, 0.3, 1) .1s; }
+.ms-navbar { z-index: 6; margin: 0 auto; display: block; width: auto; height: auto; top: 0; left: 0; list-style: none; padding: 0; }
+.ms-nav.is-visible .height-full-viewport { height: 100vh; transition: height 1s ease; }
+.nav-item { cursor: pointer; padding: .75em; opacity: 0; width: 240px; margin-left: 3em; transition: opacity .3s ease; }
+.ms-navbar a { display: block; }
+.ms-navbar a:hover { text-decoration: none; }
+.ms-navbar .ms-btn { display: inline-block; text-transform: uppercase; line-height: 1; padding: 0 0.25em; position: relative; }
+.ms-navbar .ms-btn { font-size: 1.75em; letter-spacing: .02em; color: #fff; font-weight: 700 !important; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+.ms-btn::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #df1f29;  height: .1rem;
+top: 50%; width: 0; transition: width .3s ease; }
+.nav-item__label { position: relative; display: block; margin: 0.5em 0 0 0; margin-top: 0.25em; padding: 0.5em; color: #555; transition: color .3s ease; text-decoration: none; }
+.nav-item:hover .nav-item__label { color: #9a9a9a; }
+.is-visible .nav-item { opacity: 1; transition: opacity 2s cubic-bezier(0.16, 1.08, 0.38, 0.98) .3s; }
+.nav-item .ms-btn { transition: all .3s ease; }
+.nav-item:active .ms-btn, .nav-item:focus .ms-btn, .nav-item:hover .ms-btn { color: #df1f29; opacity: 1; padding-left: 2.4rem; }
+.nav-item:active .ms-btn::before, .nav-item:focus .ms-btn::before, .nav-item:hover .ms-btn::before { width: 2rem; }
+
+  </style>
+
+</head>
+<body> 
+
+  <header class="ms-header">
+    <nav class="ms-nav">
+      <div class="ms-logo">
+        <a href="index.html" data-type="page-transition">
+          <div class="logo-dark"><img src="http://www.techhive.co.in/img/logo.png" alt="logo image"></div>
+          <div class="logo-light current"><img src="http://www.techhive.co.in/img/logo.png" alt="logo image"></div>
+        </a>
+      </div>
+      <button class="menu-btn" type="button" data-toggle="navigation">
+      <span class="menu-btn-box">
+        <span class="menu-btn-label">menu</span>
+        <span class="menu-btn-inner"></span>
+      </span>
+      </button>
+
+      <div class="height-full-viewport">
+        <ul class="ms-navbar">
+          <!-- Nav Link -->
+          <li class="nav-item">
+            <a href="index.html" data-type="page-transition">
+              <span class="ms-btn">home</span>
+              <span class="nav-item__label">Back to home page</span>
+            </a>
+          </li>
+          <!-- Nav Link -->
+          <li class="nav-item">
+            <a href="albums.html" data-type="page-transition">
+              <span class="ms-btn">albums</span>
+              <span class="nav-item__label">View all our works</span>
+            </a>
+          </li>
+          <!-- Nav Link -->
+          <li class="nav-item">
+            <a href="gallery.html" data-type="page-transition">
+              <span class="ms-btn">gallery</span>
+              <span class="nav-item__label">Interactively disintermediate</span>
+            </a>
+          </li>
+          <!-- Nav Link -->
+          <li class="nav-item">
+            <a href="blog.html" data-type="page-transition">
+              <span class="ms-btn">blog</span>
+              <span class="nav-item__label">Discover fascinating stories</span>
+            </a>
+          </li>
+          <!-- Nav Link -->
+          <li class="nav-item">
+            <a href="about.html" data-type="page-transition">
+              <span class="ms-btn">about</span>
+              <span class="nav-item__label">Learn more about the author</span>
+            </a>
+          </li>
+          <!-- Nav Link -->
+          <li class="nav-item">
+            <a href="contact.html" data-type="page-transition">
+              <span class="ms-btn">contact</span>
+              <span class="nav-item__label">Get in touch and find us</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+<script>
+  (function(window) {
+
+'use strict';
+
+$.exists = function(selector) {
+    return ($(selector).length > 0);
+}
+
+Menu();
+
+})(window);
+
+  /*------------------
+    Menu
+-------------------*/
+function Menu() {
+    if ($.exists('.menu-btn')) {
+        $('.menu-btn').on('click', function(e) {
+            var burger = $(this);
+            $(burger).toggleClass('is-active');
+            $('.ms-nav').toggleClass('is-visible');
+            $('.ms-header').not('.navbar-white').each(function() {
+                $('.logo-light').toggleClass('active');
+            });
+        });
+        $('.height-full-viewport').on({'mousewheel': function(e) {
+            if (e.target.id === 'el') return;
+            e.preventDefault();
+            e.stopPropagation();
+        }
+})
+    }
+}
+</script>
+
+</body>
+</html>
