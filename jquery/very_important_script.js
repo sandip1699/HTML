@@ -237,5 +237,39 @@ jQuery(document).ready(function() {
     }, 1000);
     });
 });
+
+if ($(window).width() < 768) {
+        $('.nav-link').click(function () { 
+            $('.menu-btn').trigger('click');
+        });
+    }
+
+//	scroll onepage 
+$('.nav-link').click(function() {
+     $('html, body').stop().animate({
+        scrollTop: $( $(this).attr('href') ).offset().top - 50
+    }, 400);
+    return false;
+});	
+	
+/* ====================== change checkbox event =========================== */
+jQuery(function($) {
+	
+	$("#industies").hide();
+	
+	$('#someSwitchOptionInfo').change(function() {
+        if($(this).is(":checked")) {
+            $("#solutions").hide(); 
+			$("#industies").show();
+        } else {
+			$("#solutions").show();
+			$("#industies").hide();
+		}
+              
+    });
+	
+    
+    
+  });
 	
   

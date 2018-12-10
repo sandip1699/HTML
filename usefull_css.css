@@ -1,0 +1,22 @@
+/* Dropdown Arrow */
+.dropdown_arrow::after, .dropdown_arrow::before {
+    content: '' !important;
+    position: absolute;
+    border-style: solid;
+    border-width: 11px 11px 0;
+    display: block;
+    width: 0;
+    z-index: 1;
+    left: 16%;
+    top: -17px;
+    transform: rotate(180deg);
+}
+.dropdown_arrow::after {
+    border-color: #FFF transparent;
+    top:-16px; clip: inherit; opacity:1 !important;
+}
+.dropdown_arrow {position:relative;}
+.dropdown_arrow::before {
+    border-color: #ccc transparent;
+    top: 9px;
+}
