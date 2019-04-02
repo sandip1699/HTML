@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Animate on scroll </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="aos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <!-- Reference Link https://michalsnik.github.io/aos/ -->
+  <script src="aos.js"></script>
+
+
+<style>
+    img {max-width: 100%;}
+    .mb-100 {margin-bottom: 100px;}
+    .mt-200 {margin-top: 300px;}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-sm-6 mb-100 mt5">
+            <div class="video_thumbs mt-4 aos-animate" data-aos="zoom-in-right">
+                <a href="#" class="embed-placeholder">
+                    <img src="1.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="video_thumbs mt-4 aos-animate" data-aos="zoom-in-left">
+                <a href="#" class="embed-placeholder">
+                    <img src="1.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-200">
+            <div class="col-sm-6 mb-100 mt5">
+                <div class="video_thumbs mt-4 aos-animate" data-aos="zoom-out-down">
+                    <a href="#" class="embed-placeholder">
+                        <img src="1.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="video_thumbs mt-4 aos-animate" data-aos="zoom-out-up">
+                    <a href="#" class="embed-placeholder">
+                        <img src="1.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    
+    </div>
+
+
+
+    <script>
+            AOS.init({
+                         easing: 'ease-out-back',
+                         duration: 1000
+                     });
+           </script>
+
+</body>
+</html>

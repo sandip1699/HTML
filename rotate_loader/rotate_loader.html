@@ -1,0 +1,79 @@
+<html>
+
+<head>
+	<title> Loader Demo </title>
+	<style>
+		/* loader */
+		.lazyloader {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background: url(bg.jpg);
+			z-index: 100;
+			-webkit-animation: slide 20s linear infinite;
+			animation: slide 20s linear infinite;
+		}
+
+		.loaderinner {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 100vh;
+		}
+		.center_logo img {width: 100%;}
+		.center_logo {
+			width: 500px;
+			height: 500px;
+			margin: auto;
+			position: relative;
+		}
+		.loader_inside {
+    position: absolute;
+    left: 0px;
+    right: 0;
+    top: 0px;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+.loader_inside img {width:100%;}
+
+		@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}
+
+		#loading {
+			-webkit-animation: rotation 2s infinite linear;
+		}
+
+		@-webkit-keyframes rotation {
+			from {
+				-webkit-transform: rotate(0deg);
+			}
+
+			to {
+				-webkit-transform: rotate(359deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="lazyloader">
+		<div class="loaderinner">
+			<div class="center_logo">
+				<img id="loading" src="points-design.png">
+				<div class="loader_inside">
+					<img src="divine-round.png">
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style>
+.preloader {
+    align-items: center;
+    -webkit-align-items: center;
+    display: flex;
+    display: -ms-flexbox;
+    height: 100%;
+    justify-content: center;
+    -webkit-justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+}
+.preloader .animation-preloader {
+    position: absolute;
+    z-index: 100;
+}
+.preloader .animation-preloader .spinner {
+    animation: spinner 1s infinite linear;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 57, 70, .15);
+    border-top-color: #ff3946;
+    height: 170px;
+    margin: 0 auto 45px auto;
+    width: 170px
+}
+
+.preloader .animation-preloader .txt-loading {
+    text-align: center;
+    user-select: none
+}
+
+.preloader .animation-preloader .txt-loading .letters-loading:before {
+    animation: letters-loading 4s infinite;
+    color: #ff3946;
+    content: attr(data-text-preloader);
+    left: 0;
+    opacity: 0;
+    top: 0;
+    line-height: 70px;
+    position: absolute
+}
+
+.preloader .animation-preloader .txt-loading .letters-loading {
+    font-weight: 700;
+    letter-spacing: 15px;
+    display: inline-block;
+    color: rgba(255, 57, 70, .15);
+    position: relative;
+    font-size: 70px;
+    line-height: 70px
+}
+
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+    animation-delay: .2s
+}
+
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+    animation-delay: .4s
+}
+
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+    animation-delay: .6s
+}
+
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+    animation-delay: .8s
+}
+
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+    animation-delay: 1s
+}
+
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+    animation-delay: 1.2s
+}
+
+.preloader .animation-preloader .txt-loading .letters-loading:nth-child(8):before {
+    animation-delay: 1.4s
+}
+
+.preloader .loader-section {
+    background-color: #fff;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: calc(50% + 1px)
+}
+
+.loaded .animation-preloader {
+    opacity: 0;
+    transition: .3s ease-out
+}
+
+@keyframes spinner {
+    to {
+        transform: rotateZ(360deg)
+    }
+}
+
+@keyframes letters-loading {
+
+    0%,
+    100%,
+    75% {
+        opacity: 0;
+        transform: rotateY(-90deg)
+    }
+
+    25%,
+    50% {
+        opacity: 1;
+        transform: rotateY(0)
+    }
+}
+</style>
+
+</head>
+<body>
+
+<!-- Loader -->
+<div id="preloader" class="preloader">
+  <div class="animation-preloader">
+    <div class="spinner"></div>
+    <div class="txt-loading">
+      <span data-text-preloader="S" class="letters-loading">
+        S
+      </span>
+      <span data-text-preloader="A" class="letters-loading">
+        A
+      </span>
+      <span data-text-preloader="N" class="letters-loading">
+        N
+      </span>
+      <span data-text-preloader="D" class="letters-loading">
+        D
+      </span>
+      <span data-text-preloader="I" class="letters-loading">
+        I
+      </span>
+      <span data-text-preloader="P" class="letters-loading">
+        P
+      </span>
+    </div>
+  </div>	
+</div>
+<!--End Loader -->
+
+
+<div class="container">
+  <h3>Collapsible Navbar</h3>
+  <p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).</p>
+  <p>Only when the button is clicked, the navigation bar will be displayed.</p>
+  <p>Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.</p>
+</div>
+
+</body>
+</html>
+
+

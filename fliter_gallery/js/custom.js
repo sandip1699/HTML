@@ -5,11 +5,10 @@
 var $body = $('body');
 var $window = $(window);
 
-//photoSwipe gallery plugin
+//photoSwipe gallery
 function initPhotoSwipe() {
 	if(typeof PhotoSwipe !== 'undefined') {
 
-		//adding prettyPhoto for backward compatibility. Deprecated.
 		//will leave only .photoswipe-link later
 		var gallerySelectors = '.photoswipe-link, a[data-gal^="prettyPhoto"], [data-thumb] a';
 		var $galleryLinks = $(gallerySelectors);

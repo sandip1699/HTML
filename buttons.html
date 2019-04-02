@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Buttons Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <style>
+    a:hover {
+      text-decoration: none;
+    }
+    .btn-outline-hover {
+      position: relative;
+      text-transform: capitalize;
+      line-height: 48px;
+      border: 1px solid #e0e9ef;
+      border-radius: 25px;
+      padding: 0 35px;
+      min-width: 180px;
+      text-align: center;
+      font-size: 18px;
+      display: inline-block;
+      transition: all 0.3s ease-in-out;
+      color: #233d63;
+    }
+    .btn-outline-hover:before {
+      content:"";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(-105deg, #00e9b0 0, #00d4ed 100%);
+      z-index: -1;
+      border-radius: 25px;
+      transform: scaleX(0);
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-outline-hover:hover {
+      color: #fff;
+    }
+    .btn-outline-hover:hover:before {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <div class="row mt-4 mb-4">
+        <div class="col-sm-6">
+          <div class="outline-btn-hover">
+            <a class="btn-outline-hover" href="#"> View all </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

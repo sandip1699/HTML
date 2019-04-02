@@ -6,59 +6,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
 
 <style>
-.isotope-wrapper img {max-width: 100%;}
-.gallery-filters a {padding: 10px; display: inline-block; }
-.mb-2 {margin-bottom: 15px;}
-
-
 
 </style>
 
 </head>
 <body>
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10 col-xl-8">
-          <div class="filters gallery-filters text-lg-right">
-              <a href="#" data-filter="*" class="active selected">All</a>
-              <a href="#" data-filter=".corporate">Corporate</a>
-              <a href="#" data-filter=".business">Business</a>								
-          </div>
-         </div>
-      </div>
-      <div class="row isotope-wrapper masonry-layout c-mb-30 gallery-image-regular" data-filters=".gallery-filters">
-          <div class="col-xl-4 mb-2 col-sm-6 business">
-                <a href="images/1.jpg" class="photoswipe-link">
-                    <img src="images/1.jpg"/>
-                </a>
-          </div>
-          <div class="col-xl-4 mb-2 col-sm-6 business">
-                <a href="images/2.jpg" class="photoswipe-link">
-                    <img src="images/2.jpg"/>
-                </a>
-          </div>
-          <div class="col-xl-4 mb-2 col-sm-6 corporate">
-                <a href="images/3.jpg" class="photoswipe-link">
-                    <img src="images/3.jpg"/>
-                </a>
-          </div>
-          <div class="col-xl-4 mb-2 col-sm-6 business">
-                <a href="images/4.jpg" class="photoswipe-link">
-                    <img src="images/4.jpg"/>
-                </a>
-          </div>
-      </div>
+<section class="page_slider">
+    <div class="flexslider" data-nav="true" data-dots="false">
+        <ul class="slides">
+            <li class="ds text-center">
+                <img src="images/1.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="intro_layers_wrapper">
+                                <div class="intro_layers">
+                                    <div class="intro_layer" data-animation="flipInX">
+                                        <h3 class="intro_before_featured_word">
+                                            Keep in touch & stay updated
+                                        </h3>
+                                    </div>
+                                    <div class="intro_layer" data-animation="fadeInRight">
+                                        <h2 class="text-uppercase intro_featured_word">
+                                            With market
+                                            <br> Trends
+                                        </h2>
+                                    </div>
+                                    <div class="intro_layer" data-animation="fadeIn">
+                                        <div class="d-inline-block">
+                                            <button type="button" class="btn btn-outline-maincolor center-block" data-animation="fadeIn">Subsctibe to Newsletter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- eof .intro_layers -->
+                            </div>
+                            <!-- eof .intro_layers_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+            <li class="ds text-center">
+                <img src="images/2.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="intro_layers_wrapper">
+                                <div class="intro_layers">
+                                    <div class="intro_layer" data-animation="pullUp">
+                                        <h3 class="intro_before_featured_word">
+                                            Stuck in a ‘career rut’?
+                                        </h3>
+                                    </div>
+                                    <div class="intro_layer" data-animation="pullDown">
+                                        <h2 class="text-uppercase intro_featured_word">
+                                            Help us match to
+                                            <br> Your hr role
+                                        </h2>
+                                    </div>
+                                    <div class="intro_layer" data-animation="fadeIn">
+                                        <div class="d-inline-block">
+                                            <button type="button" class="btn btn-outline-maincolor center-block" data-animation="fadeIn">Subsctibe to Newsletter</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- eof .intro_layers -->
+                            </div>
+                            <!-- eof .intro_layers_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+            <li class="ds text-center">
+                <img src="images/3.jpg" alt="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="intro_layers_wrapper">
+                                <div class="intro_layers">
+                                    <div class="intro_layer" data-animation="pullDown">
+                                        <h3 class="intro_before_featured_word">
+                                            Launch Your recruitment career
+                                        </h3>
+                                    </div>
+                                    <div class="intro_layer" data-animation="pullUp">
+                                        <h2 class="text-uppercase intro_featured_word">
+                                            With innovate
+                                            <br> Сonsultancy
+                                        </h2>
+                                    </div>
+                                    <div class="intro_layer" data-animation="fadeIn">
+                                        <div class="d-inline-block">
+                                            <button type="button" class="btn btn-outline-maincolor center-block">Join Our HR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- eof .intro_layers -->
+                            </div>
+                            <!-- eof .intro_layers_wrapper -->
+                        </div>
+                        <!-- eof .col-* -->
+                    </div>
+                    <!-- eof .row -->
+                </div>
+                <!-- eof .container -->
+            </li>
+        </ul>
+        <ul class="flex-direction-nav">
+            <li class="flex-nav-prev">
+                <a class="flex-prev" href="#">&gt;</a>
+            </li>
+            <li class="flex-nav-next">
+                <a class="flex-next" href="#">&lt;</a>
+            </li>
+        </ul>
     </div>
+    <!-- eof flexslider -->
+</section>
+
 
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="js/isotope.js"></script>    
-<script src="js/photoswipe.js"></script>    
+<script src="js/flex-slider.js"></script>      
 <script src="js/custom.js"></script>    
 
 </body>
