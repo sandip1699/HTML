@@ -1,11 +1,9 @@
 "use strict";
 
 (function($) {
-  var $body = $("body");
-  var $window = $(window);
-
+ 
 function documentReadyInit() {
-  if ($().flexslider) {
+  if ($('.flexslider').flexslider) {
     var $introSlider = $(".page_slider .flexslider");
     $introSlider.each(function(index) {
       var $currentSlider = $(this);
