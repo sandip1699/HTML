@@ -268,8 +268,17 @@ jQuery(function($) {
               
     });
 	
-    
-    
-  });
+});
+
+/* ====================== Click outside remove class =========================== */
+    jQuery('.wd-login').on('click', function(e) {
+        jQuery(this).toggleClass('openlogin');
+		e.stopPropagation()
+	 });
+	 jQuery(document).on("click", function(e) {
+		if (jQuery(e.target).is(".wd-login") === false) {
+			jQuery(".wd-login").removeClass("openlogin");
+		}
+	});
 	
   

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Javascript Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,101 +10,33 @@
 </head>
 <style>
 
-  .rotate_img span { position: absolute; }
-  .rotate_img img { width:100%; }
-  .rotate_img span:nth-of-type(1) { animation-delay: 15s }
-  .rotate_img span:nth-of-type(2) { animation-delay: 12.5s }
-  .rotate_img span:nth-of-type(3) { animation-delay: 10s }
-  .rotate_img span:nth-of-type(4) { animation-delay: 7.5s }
-  .rotate_img span:nth-of-type(5) { animation-delay: 5s }
-  .rotate_img span:nth-of-type(6) { animation-delay: 2.5s }
-  .rotate_img span:nth-of-type(7) { animation-delay: 0s }
-  .rotate_img span { animation-name: multiple-item-crossfade; animation-duration: 17.5s; animation-iteration-count: infinite }
 
-  @keyframes multiple-item-crossfade { 0%, 10.5714285714% {
-      opacity:1
-      }
-      14.2857142857%, 96.2857142857% {
-      opacity:0
-      }
-      100% {
-      opacity:1
-      }
-    }
-
-
-  .slider_text { float:left;width:100%;margin:20px 0px; }
-  .home_text { font-weight: 700;  line-height: 1.15em; font-size: 54px;  line-height: 72px; }
-  .slider_text span { position: absolute; left: 0; top:-24px; background: #fff; width: 100%; color: #2690ff; animation-name: multiple-item-crossfade; animation-duration: 17.5s; animation-iteration-count: infinite }
-.slider_text span:nth-of-type(1) { animation-delay: 15s }
-.slider_text span:nth-of-type(2) { animation-delay: 12.5s }
-.slider_text span:nth-of-type(3) { animation-delay: 10s }
-.slider_text span:nth-of-type(4) { animation-delay: 7.5s }
-.slider_text span:nth-of-type(5) { animation-delay: 5s }
-.slider_text span:nth-of-type(6) { animation-delay: 2.5s }
-.slider_text span:nth-of-type(7) { animation-delay: 0s }
-.slider_text  { position: relative; left: 0;  }
   
 </style>
+
+<script>
+var pizza = {
+  toppings: ['cheese', 'sauce', 'pepperoni'],
+  crust: 'deep dish',
+  serves: 2,
+};
+
+console.log(pizza);
+
+
+function eat (food) {
+  return food + ' tasted really good.';
+}
+
+console.log(eat('bananas'));
+
+
+
+</script>
+
 <body> 
 
-<div class="container clearfix">
-<!--  
-  <div class="jambotron">
-      <div class="col-sm-6">
-      <div class="rotate_img">
-        <span> <img src="img/s2.jpg"> </span>
-        <span> <img src="img/s8.jpg"> </span>
-        <span> <img src="img/s3.jpg"> </span>
-        <span> <img src="img/s1.jpg"> </span>
-        <span> <img src="img/s9.jpg"> </span>
-        <span> <img src="img/s5.jpg"> </span>
-        <span> <img src="img/s6.jpg"> </span>
-      </div>
-      </div>  
-      <div class="col-sm-6">
-        <h1 class="home_text">
-						<div style="float:left;width:100%;margin:20px 0px;">Fact:</div>
-						<div class="slider_text">
-							<span>Caterers</span>
-							<span>Rock Bands</span>
-							<span>Comedians</span>
-							<span>Belly Dancers</span>
-							<span>Violinists</span>
-							<span>Photographers</span>
-							<span>Princesses</span>
-						</div>
-						<div style="float:left;width:100%;margin:20px 0px;">make events</div>
-						<div style="float:left;width:100%;">awesome.</div>
-					</h1>
-      </div>
-  </div>
-
-</div>-->
-
-
-
-<div style="position: relative; max-width: 835px; height: 310px;">
-  <div style="overflow: hidden; max-height: 283px; max-width: 274px; z-index: 0; position: absolute; bottom: 0px; left: 49px; ">
-    <a href="https://www.flipsnack.com/Ellenclee/7-days-to-self-love.html">
-      <img src="https://s3.amazonaws.com/files.flipsnack.net/collections/items/181ae176030a4bf6636251ci77993691/covers/fsdxiqtzgseo9k7s/small" alt="email cover" style="max-width: 274px;">
-    </a>
-  </div>
-  <div class="content-edit content-edit-lg" style="z-index: 1; font-weight: 900; color: rgb(65, 72, 89); font-size: 41px; position: absolute; top: 50px; right: 50px;  max-width: 390px; text-align: left; line-height: 1em; overflow: visible;"
-    contenteditable="false">
-    7 Days to Self Love
-  </div>
-  <div class="content-edit content-edit-sm" style="z-index: 1; font-weight: 500; color: rgb(111, 118, 133); font-size: 16px; position: absolute; bottom: 93px; right: 49px; text-align: left; max-width: 372px; padding: 17px 0px; border-top: 1px solid rgb(234, 234, 234); border-bottom: 1px solid rgb(234, 234, 234);"
-    contenteditable="false">
-    Take a look at this publication to see my recent work. I made this flipbook using flipsnack.com</div>
-    <div class="content-edit content-edit-sm" style="z-index: 1; font-weight: 500; color: rgb(111, 118, 133); font-size: 16px; position: absolute; bottom: 30px; right: 50px; text-align: left; max-width: 372px; padding: 17px 0px;"
-    contenteditable="false">
-    <a style="background: #edd734;color: #000; padding: 4px 12px; cursor:pointer"> Read Book <a> </div>
-  
-</div>
-
-
-
+  test
 
 </body>
 </html>

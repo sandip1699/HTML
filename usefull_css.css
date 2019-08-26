@@ -20,3 +20,239 @@
     border-color: #ccc transparent;
     top: 9px;
 }
+
+
+/* ================ title arrow shape =========================*/
+.top-social::before { border-right: 65px solid #bd0102; border-top: 49px solid rgba(0, 0, 0, 0); content: " "; height: 0; left: -65px; position: absolute; width: 0; }
+.top-social { height: 49px; position: relative; }
+.top-social::before { border-right-color: #bd0102; }
+.vc_custom_1459147757344 { background: #000 url("images/as.png") no-repeat scroll 0 0 !important; padding-bottom: 60px !important; padding-top: 50px !important; }
+#great-construct-team { background: #162342 url("img/resources/great-construct-team-bg.jpg") no-repeat scroll center center / cover; padding: 50px 0; }
+
+/* ====== for hover eefect =====*/
+.zo-product-overlay { background-color: #000000; bottom: -100%; left: 0; padding: 20px 0 35px; position: absolute; text-align: center; transition: all 200ms ease-in-out 0s; width: 100%; z-index: 1; }
+.zo-product-overlay .zo-product-title { position: relative; }
+.zo-product-teaser .zo-product-overlay .zo-product-title::before { border-bottom: 35px solid #ff5722; border-left: 275px solid rgba(0, 0, 0, 0); content: ""; height: 20px; left: 0; position: absolute; top: -55px; width: 100%; }
+/*====== <div class="sep-element"></div>  bottom border =====*/
+
+.sep-element { border-bottom: 1px solid #237ac6; display: inline-block; margin: 0 auto; position: relative; width: 100px; }
+.sep-element::after { background-color: #ffffff; border: 1px solid #237ac6; content: ""; display: block; height: 11px; left: 50%; margin-left: -5px; margin-top: -5px; position: absolute; top: 0; width: 10px; }
+
+
+/* ===============  input berfore wrap:before  ============================*/
+wrap::before { background: rgba(255, 255, 255, 0.05) none repeat scroll 0 0; border: 1px solid #646464; bottom: 0; content: ""; left: -25px; position: absolute; right: -15px; top: 0; transform: skew(-33deg); transition: all 400ms ease 0s; }
+
+
+/* =============== big right arrow ============================*/
+.ans-details:before { border-left: 34px solid rgba(0, 0, 0, 0); border-right: 34px solid rgba(0, 0, 0, 0); border-bottom: 34px solid #c1e1ec; clear: both; content: ""; height: 0; left: 10%; position: absolute; top: -34px; width: 0; }
+/* =============== Heading Bottom Saparator <div class="separator"> </div>  ============================*/
+.separator::before { content: ""; float: right; height: 1px; max-width: 120px; opacity: 0.5; position: relative; right: 100%; top: 1px; transition: all 0.3s ease 0s; width: 120%; }
+.separator::after { content: ""; float: left; height: 1px; left: 100%; max-width: 120px; opacity: 0.5; position: absolute; top: 1px; transition: all 0.3s ease 0s; width: 120%; }
+.separator { border: 1px solid; box-sizing: border-box; content: ""; display: inline-block; height: 5px !important; margin: auto; max-width: 100px; opacity: 0.6; position: relative; transition: all 0.3s ease 0s; width: 20%; }
+.onhover:hover .separator::after {
+    max-width: 190px;
+    width: 190%;
+}
+
+/* =============== chating li psesdo class ============================*/
+.chat_body ul li:nth-of-type(odd) span::after { 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 0;
+    height: 0;
+    border: 5px solid #E8E8E8;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+      }
+.chat_body ul li:nth-of-type(even) span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    width: 0;
+    height: 0;
+    border: 5px solid #CDEAFC;
+    border-right-color: transparent;
+    border-top-color: transparent;
+ }
+
+
+/*================== tab active botttom arrow =============================*/
+.nav-tabs > li.active > a::after {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #FFCA00;
+    clear: both;
+    content: "";
+    height: 0;
+    left: 44%;
+    position: absolute;
+    top: 38px;
+    width: 0;
+}
+/*================== table =============================*/
+table tr:nth-child(2n+1) {
+    background-color: #f1f1f1;
+}
+table tr:nth-child(2n) {
+    background-color: #ffffff;
+}
+.iten-info [class*="col-"] { padding-right: 0; }
+
+/*================== Transition =============================*/
+*::before, *::after {
+    transition: all 0.3s ease-in-out 0s;
+}
+a {
+    transition: all 0.35s ease 0s;
+}
+/*================== box shadow on hover =============================*/
+.price-table-feature-block:hover {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: -2px 5px 15px 7px #e2e2e2;
+    transform: scale(1);
+    transition: all 0.5s ease-out 0s;
+}
+/*================== Flex div width =============================*/
+.half {
+   flex-grow: 0;
+   flex-shrink: 0;
+   flex-basis: 50%;
+}
+.disflex { display: flex; }
+.flex-spacer { flex: 1 1 auto; flex-basis:30px; }
+/*================== Drop down menu google profile =============================*/
+.dropdown-menu.pull-right { border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 2px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); color: #000; }
+.dropdown-menu.pull-right::before { border-bottom: 7px solid rgba(0, 0, 0, 0.2); border-left: 7px solid transparent; border-right: 7px solid transparent; right: 8px; top: -7px; }
+.dropdown-menu.pull-right::after { border-bottom: 6px solid #fff; border-left: 6px solid transparent; border-right: 6px solid transparent; right: 9px; top: -6px; }
+.dropdown-menu.pull-right::after, .dropdown-menu.pull-right::before { content: ""; display: inline-block; position: absolute; }
+.dropdown-toggle { cursor: pointer; }
+
+.h6::after {
+    background: #ffa200;
+    border-radius: 3px;
+    content: "";
+    display: block;
+    height: 6px;
+    margin: 7px 0 0;
+    width: 35px;
+}
+
+/* <meta name="viewport" content="width=1280px">  */
+
+/*--------------------- material input form stylings -------------------------------
+/*
+
+<div class="md_group">      
+    <input type="password" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label> Password </label>
+</div> */
+
+.md_group { position: relative; margin-bottom: 35px; }
+.md_group input { font-size: 14px; padding:7px 0px; display: block; width:100%; border: none; border-bottom: 1px solid #d2d2d2; }
+.md_group input:focus { outline: none; }
+/* LABEL ======================================= */
+.md_group label { color: #818181; font-size: 15px; font-weight: normal; position: absolute; pointer-events: none; left:0px; top: 7px; transition: 0.2s ease all; -moz-transition: 0.2s ease all; -webkit-transition: 0.2s ease all; }
+  /* active state */
+.md_group input:focus ~ label, .md_group input:valid ~ label {
+ top:-15px;
+ font-size:13px;
+ color:#EE8138;
+}
+/* BOTTOM BARS ================================= */
+.md_group .bar { position: relative; display: block; width:100%; }
+.md_group .bar:before, .bar:after { content: ''; height: 2px; width: 0; bottom: 1px; position: absolute; background: #EE8138; transition: 0.2s ease all; -moz-transition: 0.2s ease all; -webkit-transition: 0.2s ease all; }
+.md_group .bar:before { left: 50%; }
+.md_group .bar:after { right: 50%; }
+/* active state */
+.md_group input:focus ~ .bar:before, .md_group input:focus ~ .bar:after { width: 50%; }
+/* HIGHLIGHTER ================================== */
+.md_group .highlight { position: absolute; height: 60%; width: 100px; top: 25%; left: 0; pointer-events: none; opacity: 0.5; }
+/* active state */
+.md_group input:focus ~ .highlight { -webkit-animation: inputHighlighter 0.3s ease; -moz-animation: inputHighlighter 0.3s ease; animation: inputHighlighter 0.3s ease; }
+  
+/* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {  from {
+background:#EE8138;
+}
+to { width: 0; background: transparent; }
+}
+ @-moz-keyframes inputHighlighter {  from {
+background:#EE8138;
+}
+to { width: 0; background: transparent; }
+}
+ @keyframes inputHighlighter {  from {
+background:#EE8138;
+}
+to { width: 0; background: transparent; }
+}
+/*--------------------- Hover on border inset change  ------------------------------- */
+.support_list .support_block:hover {  background: #F18C22; box-shadow: inset 0 0 0 15px #F19D1F;}
+
+/*--------------------- login background  <div class="auth0-lock-overlay"></div> ------------------------------- */
+.auth0-lock-overlay {
+    background: -webkit-radial-gradient(#40404b, #111118) rgba(34,34,40,0.94);
+    background: radial-gradient(#40404b, #111118) rgba(34,34,40,0.94);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-in 0.4s;
+    transition: opacity 0.2s ease-in 0.4s;
+}
+.loginbiox { box-shadow: 0 0 40px 4px #111118;}
+
+/* checkbox */
+.md-checkbox { position: relative; margin: 16px 0; }
+.md-checkbox label { cursor: pointer; }
+.md-checkbox label:before, .md-checkbox label:after { content: ""; position: absolute; left: 0; top: 0; }
+.md-checkbox label:before { width: 20px; height: 20px; background: #fff; border: 2px solid rgba(0, 0, 0, 0.54); border-radius: 2px; cursor: pointer; transition: background .3s; }
+.md-checkbox input[type="checkbox"] { outline: 0; margin-right: 10px; }
+.md-checkbox input[type="checkbox"]:checked + label:before { background: #FD0942; border: none; }
+.md-checkbox input[type="checkbox"]:checked + label:after { transform: rotate(-45deg); top: 5px; left: 4px; width: 12px; height: 6px; border: 2px solid #fff; border-top-style: none; border-right-style: none; }
+.md-checkbox input[type="checkbox"] + label { padding-left: 30px; }
+
+
+/* model fade effect */
+.modal  {opacity: 0;transform: scale3d(0.5, 0.5, 1);
+    transition: opacity 0.2s, transform 0.4s cubic-bezier(0.155, 1.105, 0.295, 1.12), -webkit-transform 0.4s cubic-bezier(0.155, 1.105, 0.295, 1.12);}
+.modal.in {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+}
+
+/* table tr gredient background */
+tr { background:-webkit-linear-gradient(top,transparent 0,transparent 50%,rgba(0,0,0,.15) 95.5%,rgba(0,0,0,.15) 100%);
+    background: linear-gradient(top,transparent 0,transparent 50%,rgba(0,0,0,.15) 95.5%,rgba(0,0,0,.15) 100%);
+}
+
+/* text shadow */
+.text  {text-shadow: rgba(0, 0, 0, 0.36) 7px 7px 10px;}
+.shadow {box-shadow: 0 5px 20px 1px rgba(17,72,155,.2);}
+
+/* fixed navigation animation */
+.page_header.affix .main-navigation { animation: slide-down 0.7s; opacity: 1; }
+@keyframes slide-down {  0% {
+opacity:5;
+transform: translateY(-100%);
+}
+100% {
+opacity:1;
+transform: translateY(0);
+}
+}
+
+/* Mobile landscape media query */
+
+@media only screen and (min-device-width: 768px) and (max-device-width:1024px) and (orientation: landscape) { 
+
+}
