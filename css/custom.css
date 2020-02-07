@@ -1,0 +1,42 @@
+/* Owl Slider nav */
+.owl-nav button { position: absolute; top: 45%; z-index: 100; }
+.owl-nav button:focus { outline: none; border: none; }
+.owl-nav button.owl-prev { left: -45px; }
+.owl-nav button.owl-next { right: -45px; }
+.owl-nav button i { font-size: 30px; }
+
+/* Header Fixed  */
+.site-header.fixed-menu { position: fixed; left: 0; right: 0; top: 0; z-index: 1000; background: #ffffff; -webkit-animation-name: animationFade; -o-animation-name: animationFade; animation-name: animationFade; -webkit-animation-duration: 1s; -o-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; -webkit-box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35); box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.35); }
+ @-webkit-keyframes animationFade { from {
+ opacity: 0;
+ -webkit-transform: translate3d(0, -100%, 0);
+ transform: translate3d(0, -100%, 0);
+}
+to { opacity: 1; -webkit-transform: none; transform: none; }
+}
+ @-o-keyframes animationFade { from {
+ opacity: 0;
+ -webkit-transform: translate3d(0, -100%, 0);
+ transform: translate3d(0, -100%, 0);
+}
+to { opacity: 1; -webkit-transform: none; -o-transform: none; transform: none; }
+}
+ @keyframes animationFade { from {
+ opacity: 0;
+ -webkit-transform: translate3d(0, -100%, 0);
+ transform: translate3d(0, -100%, 0);
+}
+to { opacity: 1; -webkit-transform: none; -o-transform: none; transform: none; }
+}
+
+
+/* Scroll Top and Whatspp icon  */
+/* <a class="scroll-top " href="#top" id="top" style="display: block;"><i class="ti-angle-up"></i> </a>
+   <a class="whatsappbtn" target="_blank" href="https://api.whatsapp.com/send?phone=+91898258552&amp;text=Hello"> 
+	<i class="fa fa-facebook"></i>
+</a>
+*/
+.scroll-top { transition: all .5s ease-in-out; position: fixed; bottom: 15px; right: 15px; border-radius: 50px; z-index: 999; background: #000; font-size: 14px; width: 40px; height: 40px; text-align: center; line-height: 40px; box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.12); }
+.scroll-top i { color: #fff !important; font-size: 20px; line-height: 40px; }
+.whatsappbtn { transition: all .5s ease-in-out; position: fixed; bottom: 80px; right: 15px; border-radius: 50px; z-index: 999; background: #54CC61; font-size: 14px; width: 40px; height: 40px; text-align: center; line-height: 38px; box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.12); }
+.whatsappbtn i { color: #fff !important; font-size: 21px; line-height: 40px; }

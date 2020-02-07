@@ -235,10 +235,20 @@ tr { background:-webkit-linear-gradient(top,transparent 0,transparent 50%,rgba(0
     background: linear-gradient(top,transparent 0,transparent 50%,rgba(0,0,0,.15) 95.5%,rgba(0,0,0,.15) 100%);
 }
 
+/* owl nav Css */
+.owl-carousel.owl-theme .owl-nav [class*=owl-] {position: absolute; top:46%; z-index: 100; background-color: #555; color: #fff; border-radius: 50%; width: 40px; height: 40px; line-height: 40px; border: none;font-size: 30px;
+  text-align: center; }
+.owl-carousel .owl-nav button.owl-prev {left:-30px;}
+.owl-carousel .owl-nav button.owl-next {right:-30px}
+
 /* text shadow */
 .text  {text-shadow: rgba(0, 0, 0, 0.36) 7px 7px 10px;}
 .shadow {box-shadow: 0 5px 20px 1px rgba(17,72,155,.2);}
-
+/* Height limit background ===============================================================================================
+.hl {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+============================================================================ */
 /* fixed navigation animation */
 .page_header.affix .main-navigation { animation: slide-down 0.7s; opacity: 1; }
 @keyframes slide-down {  0% {

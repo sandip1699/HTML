@@ -188,7 +188,7 @@ $('.dropdown').on('hide.bs.dropdown', function(e){
 $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
     
-    if (scroll >= 450) {
+    if (scroll >= 100) {
         $(".navbar").addClass("navbar-fixed-top");
     } else {
         $(".navbar").removeClass("navbar-fixed-top");

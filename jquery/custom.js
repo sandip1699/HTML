@@ -225,16 +225,65 @@
 			}
 		});
 	});
-	/*================================
-			owlCarousel
+   /* ====================================
+      Nav Fixed On Scroll
+   ======================================= */
+   var $window = $(window);
+   $window.scroll(function() {
+	   var $scroll = $window.scrollTop();
+	   var $navbar = $(".site-header");
+	   if ($scroll >= 30) {
+		   $navbar.addClass("fixed-menu");
+	   } else {
+		   $navbar.removeClass("fixed-menu");
+	   }
+   });
+
+/*================================
+			    Scroll Top
 	==================================*/
-	$('#th-bubble-testimonial').owlCarousel({
-		items: 1,
-		loop: true,
-		autoplay: true,
-		autoplayTimeout: 3500,
-		dots: true
+	$("#top").hide();
+	$(window).scroll(function() {
+	  if ($(window).scrollTop() > 300) {
+		jQuery("#top").fadeIn(500);
+	  } else {
+		$("#top").fadeOut(500);
+	  }
 	});
+	$("#top").click(function() {
+	  $("body,html").animate(
+		{
+		  scrollTop: 0
+		},
+		1000
+	  );
+	  return false;
+	});
+  
+
+  
+
+if ($('.testimonialslider').length) {
+   $('.testimonialslider').owlCarousel({
+	   loop:true,
+	   margin:20,
+	   nav:true,
+	   dots:false,
+	   navText: ["<i class='ti-angle-left'></i>","<i class='ti-angle-right'></i>"],
+	   responsive:{
+		   0:{
+			   items:1,
+		   },
+		   600:{
+			   items:2
+		   },
+		   1000:{
+			   items:3
+		   }
+	   }
+   });
+ }
+
 
 
 }(jQuery));

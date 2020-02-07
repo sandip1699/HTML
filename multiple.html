@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- <meta name="viewport" content="width=1200px"> -->
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+  /*================================
+			    Scroll Top
+	==================================*/
+	$("#top").hide();
+	$(window).scroll(function () {
+		if ($(window).scrollTop() > 200) {
+			jQuery("#top").fadeIn(500);
+		} else {
+			$("#top").fadeOut(500);
+		}
+	});
+	$("#top").click(function () {
+		$('body,html').animate({
+			scrollTop: 0
+		}, 1000);
+		return false;
+	});
+  </script>
+  <style>
+.scroll-top { transition: all .5s ease-in-out; position: fixed; bottom: 15px; right: 15px; border-radius: 50px; z-index: 999; background: transparent; font-size: 14px; background: #ffffff; width: 40px; height: 40px; text-align: center; line-height: 38px; box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.12); display: none; }
+.scroll-top i { color: #03A2C9; font-size: 25px; line-height: 37px; }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="col-sm-4">
+<h1> Close Button </h1>
+  <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="presentation"><path d="M12 10.586L6.707 5.293a1 1 0 0 0-1.414 1.414L10.586 12l-5.293 5.293a1 1 0 0 0 1.414 1.414L12 13.414l5.293 5.293a1 1 0 0 0 1.414-1.414L13.414 12l5.293-5.293a1 1 0 1 0-1.414-1.414L12 10.586z" fill="currentColor"></path></svg>
+  </div>
+ </div>
+ 
+ 
+ 
+ <a class="scroll-top" href="#top" id="top" style="display: block;"><i class="fa fa-angle-up"></i> </a>
+
+ 
+  
+  
+</body>
+
+</html>  
